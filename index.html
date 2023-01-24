@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- ☂🌂 -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🌞APP 🕵️‍♂️FOR 🕵️‍♀️WEATHER🌚</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-warning bg-opacity-50">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">🌈Weather☔Detail🌊</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html"
+                >About📉📈APP</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="📋Search-here📋"
+              aria-label="Search"
+              id="city"
+            />
+            <button class="btn btn-outline-danger" type="submit" id="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="containeer my-1">
+      <h1 class="text-center">Weather for 👁‍🗨<span id="cityname"></span></h1>
+      <main>
+        <div class="row mx-2 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Wind-Info🌂</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <span id="wind_speed0"></span>
+                  <small class="text-muted fw-light">km/hr</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>cloud~Pct is <span id="cloud_pct"></span></li>
+                  <li>Wind Speed is <span id="wind_speed"></span></li>
+                  <li>Wind Degree is <span id="wind_degrees"></span></li>
+                </ul>
+                <button
+                  type="button"
+                  class="w-100 btn btn-lg btn-outline-warning"
+                >
+                  🧨Welcome🧨
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Sun-Details🌞</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <span id="humidity0"></span
+                  ><small class="text-muted fw-light">%</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Sunrise Time is <span id="sunrise"></span></li>
+                  <li>Sunset Time is <span id="sunset"></span></li>
+                  <li>Humidity is <span id="humidity"></span></li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg px-2 btn-warning">
+                  🌟98.97% Accuracy🌟
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-warning">
+              <div class="card-header py-3 text-bg-warning border-warning">
+                <h4 class="my-0 fw-normal">Temperature🌡</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title">
+                  <span id="temp"></span
+                  ><small class="text-muted fw-light">°C</small>
+                </h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Minimum 🌡 is <span id="min_temp"></span></li>
+                  <li>Maximum 🌡 is <span id="max_temp"></span></li>
+                  <li>Feels likes <span id="feels_like"></span></li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-warning">
+                  🙏Thanks for Visit🙏
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="display-6 text-center mb-4">
+          ☀ Weather of ⛱Popular🌜Places⛱ in INDIA ☀
+        </h2>
+
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="max-width: 34%">🏍🚙CITIES🚌🚲</th>
+                <th style="max-width: 22%">Cloud⚡pct</th>
+                <th style="max-width: 22%">Feels⚡like</th>
+                <th style="max-width: 22%">Humidity</th>
+                <th style="max-width: 22%">Max⚡temp</th>
+                <th style="max-width: 22%">Min⚡temp</th>
+                <th style="max-width: 22%">Sun⚡rise</th>
+                <th style="max-width: 22%">Sun⚡set</th>
+                <th style="max-width: 22%">Temp⚡</th>
+                <th style="max-width: 22%">Wind⚡degrees</th>
+                <th style="max-width: 22%">Wind⚡speed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start text-center">
+                  🌗HYDERABAD💭
+                </th>
+                <td class="cloud_pct">🌦</td>
+                <td class="feels_like">🌦</td>
+                <td class="humidity">🌦</td>
+                <td class="min_temp">🌦</td>
+                <td class="max_temp">🌦</td>
+                <td class="sunrise">🌦</td>
+                <td class="sunset">🌦</td>
+                <td class="temp">🌦</td>
+                <td class="wind_degrees">🌦</td>
+                <td class="wind_speed">🌦</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text🌦start text🌦center">💭GUWAHATI🌗</th>
+                <td class="cloud_pct">🌦</td>
+                <td class="feels_like">🌦</td>
+                <td class="humidity">🌦</td>
+                <td class="min_temp">🌦</td>
+                <td class="max_temp">🌦</td>
+                <td class="sunrise">🌦</td>
+                <td class="sunset">🌦</td>
+                <td class="temp">🌦</td>
+                <td class="wind_degrees">🌦</td>
+                <td class="wind_speed">🌦</td>
+              </tr>
+            </tbody>
+
+            <tbody>
+              <tr>
+                <th scope="row" class="text🌦start text🌦center">🌗RAIPUR💭</th>
+                <td class="cloud_pct">🌦</td>
+                <td class="feels_like">🌦</td>
+                <td class="humidity">🌦</td>
+                <td class="min_temp">🌦</td>
+                <td class="max_temp">🌦</td>
+                <td class="sunrise">🌦</td>
+                <td class="sunset">🌦</td>
+                <td class="temp">🌦</td>
+                <td class="wind_degrees">🌦</td>
+                <td class="wind_speed">🌦</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text🌦start text🌦center">
+                  💭THIRUVANANTHAPURAM🌗
+                </th>
+                <td class="cloud_pct">🌦</td>
+                <td class="feels_like">🌦</td>
+                <td class="humidity">🌦</td>
+                <td class="min_temp">🌦</td>
+                <td class="max_temp">🌦</td>
+                <td class="sunrise">🌦</td>
+                <td class="sunset">🌦</td>
+                <td class="temp">🌦</td>
+                <td class="wind_degrees">🌦</td>
+                <td class="wind_speed">🌦</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text🌦start text🌦center">🌗INDORE💭</th>
+                <td class="cloud_pct">🌦</td>
+                <td class="feels_like">🌦</td>
+                <td class="humidity">🌦</td>
+                <td class="min_temp">🌦</td>
+                <td class="max_temp">🌦</td>
+                <td class="sunrise">🌦</td>
+                <td class="sunset">🌦</td>
+                <td class="temp">🌦</td>
+                <td class="wind_degrees">🌦</td>
+                <td class="wind_speed">🌦</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text🌦start text🌦center">💭RANCHI🌗</th>
+                <td class="cloud_pct">🌦</td>
+                <td class="feels_like">🌦</td>
+                <td class="humidity">🌦</td>
+                <td class="min_temp">🌦</td>
+                <td class="max_temp">🌦</td>
+                <td class="sunrise">🌦</td>
+                <td class="sunset">🌦</td>
+                <td class="temp">🌦</td>
+                <td class="wind_degrees">🌦</td>
+                <td class="wind_speed">🌦</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
